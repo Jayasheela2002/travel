@@ -1,83 +1,92 @@
-<nav>
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Travel Blog</title>
+  <title>Wanderlust Diaries 🌍</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #fdfdfd;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
       color: #333;
     }
-
     header {
-      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
-      height: 300px;
+      background: url('https://source.unsplash.com/1600x400/?travel') no-repeat center center/cover;
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    }
-
-    header h1 {
-      font-size: 48px;
-    }
-
-    nav {
-      background-color: #ff6b6b;
-      padding: 10px 0;
+      padding: 60px 20px;
       text-align: center;
     }
-
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    nav {
+      background: #333;
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
     }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
+    section {
       padding: 20px;
     }
-
-    .post {
-      background: #fff;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    .destinations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      background: white;
       border-radius: 8px;
-      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: calc(33% - 20px);
+      padding: 15px;
     }
-
-    .post img {
+    .card img {
       width: 100%;
-      height: auto;
-      display: block;
+      border-radius: 8px;
     }
-
-    .post-content {
-      padding: 20px;
+    .blog {
+      margin-top: 40px;
     }
-
-    .post-content h2 {
-      margin-top: 0;
-      color: #ff6b6b;
-    }
-
-    .post-content p {
+    .blog p {
       line-height: 1.6;
     }
-
-    footer {
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
       background: #333;
       color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
       text-align: center;
-      padding: 15px;
+      padding: 20px;
+      background: #222;
+      color: white;
       margin-top: 40px;
     }
   </style>
@@ -85,42 +94,66 @@
 <body>
 
   <header>
-    <h1>My Travel Blog</h1>
+    <h1>Wanderlust Diaries</h1>
+    <p>Exploring the world, one story at a time</p>
   </header>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Destinations</a>
-    <a href="#">Tips</a>
-    <a href="#">Gallery</a>
-    <a href="#">Contact</a>
-    <a href="login.html">Login</a> 
+    <a href="#destinations">Destinations</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <div class="container">
-    <div class="post">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach">
-      <div class="post-content">
-        <h2>Exploring the Beaches of Bali</h2>
-        <p>I spent a week soaking up the sun and waves on the gorgeous beaches of Bali. From sunrise yoga to sunset seafood dinners, it was magical.</p>
+  <section id="destinations">
+    <h2>Featured Destinations</h2>
+    <div class="destinations">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?paris" alt="Paris">
+        <h3>Paris</h3>
+        <p>The city of lights and love. A timeless classic.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?bali" alt="Bali">
+        <h3>Bali</h3>
+        <p>Island paradise with lush jungles and serene beaches.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?tokyo" alt="Tokyo">
+        <h3>Tokyo</h3>
+        <p>Where tradition meets futuristic innovation.</p>
       </div>
     </div>
+  </section>
 
-    <div class="post">
-      <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" alt="Mountains">
-      <div class="post-content">
-        <h2>Hiking in the Swiss Alps</h2>
-        <p>The mountains of Switzerland took my breath away — literally and figuratively! Here's how to plan your own scenic hike.</p>
-      </div>
-    </div>
-  </div>
+  <section id="blog" class="blog">
+    <h2>Latest Blog Post</h2>
+    <p>
+      Just returned from a whirlwind adventure through Southeast Asia. From the bustling streets of Bangkok to the tranquil temples of Luang Prabang, every moment was unforgettable. Stay tuned for my travel hacks and hidden gems!
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
   <footer>
-    &copy; 2025 My Travel Blog | All Rights Reserved
+    &copy; 2025 Wanderlust Diaries. All rights reserved.
   </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      alert(`Thanks, ${name}! Your message has been sent.`);
+      this.reset();
+    });
+  </script>
 
 </body>
 </html>
-
-  </nav>
-  
